@@ -1,5 +1,5 @@
-public class Array {
-    public static void main(String[] args) {
+public class ArrayType {
+    public static void main(StringType[] args) {
         // declaring an array
         int[] marks = new int[6];
         int[] points = new int[] {1, 2, 3, 4, 5, 7};
