@@ -25,12 +25,24 @@ public class Subsets_78 {
 
     public List<List<Integer>> solution(int[] nums) {
         List<List<Integer>> res = new ArrayList<>();
-        
-        return null;
+        // add a blank list [] into the result list
+        res.add(new ArrayList<>());
+        // for each unique number in nums
+        for (int num : nums) {
+            int size = res.size();
+            // add to the end of each list of result list: new number
+            for (int j = 0; j < size; j++) {
+                List<Integer> temp = new ArrayList<>(res.get(j));
+                temp.add(num);
+                res.add(new ArrayList<>(temp));
+            }
+        }
+        return res;
     }
 
     public static void main(String[] args) {
-        int[] nums = new int[]{1, 2, 3};
+        // int[] nums = new int[]{1, 2, 3};
+        int[] nums = new int[]{ 0 };
         System.out.println(new Subsets_78().solution(nums));
     }
 }
