@@ -15,8 +15,7 @@ class TreeNode {
         this.right = right;
     }
 }
-
-public class InorderTraversal {
+public class InorderTraversal_94 {
     public List<Integer> inorderTraversal(TreeNode root) {
         List<Integer> result = new ArrayList<>();
         if (root == null) return result;
@@ -26,7 +25,7 @@ public class InorderTraversal {
         return result;
     }
     public static void main(String[] args) {
-        InorderTraversal inorderTraversal = new InorderTraversal();
+        InorderTraversal_94 inorderTraversal = new InorderTraversal_94();
         TreeNode root = new TreeNode(1);
         root.left = new TreeNode(2);
         root.right = new TreeNode(3);
