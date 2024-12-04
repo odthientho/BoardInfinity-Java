@@ -1,6 +1,7 @@
 package Medium;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 
@@ -60,8 +61,31 @@ public class Permute_46 {
         return result;
     }
 
+    public int splitIntoTwo(List<Integer> arr) {
+        int n = arr.size();
+        int left = arr.get(0);
+        int i =1;
+        int right =0;
+        while (i<n) {
+            right += arr.get(i);
+            i++;
+        }
+        i = 1;
+        int count =0;
+        while (i<n) {
+            if (left > right) count++;
+            left += arr.get(i);
+            right -= arr.get(i);
+            i++;
+        }
+        return count;
+    }
+
     public static void main(String[] args) {
-        int[] nums = new int[]{1, 2, 3};
-        System.out.println(new Permute_46().solution(nums));
+//        int[] nums = new int[]{1, 2, 3};
+//        System.out.println(new Permute_46().solution(nums));
+//
+        List<Integer> list = new ArrayList<>(Arrays.asList(-3, -2, 10, 20, -30));
+        System.out.println(new Permute_46().splitIntoTwo(list));
     }
 }
