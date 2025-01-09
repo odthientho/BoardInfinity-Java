@@ -25,5 +25,7 @@ public class maxDepth_104 {
     }
 
     public static void main(String[] args) {
+        String s;
+        char r;
     }
 }
